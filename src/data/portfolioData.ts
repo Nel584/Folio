@@ -1,3 +1,6 @@
+import sylasProfile from '../assets/images/sylas_profile.jpg';
+import codingRedOrange from '../assets/images/coding_redorange.jpg';
+
 export interface Project {
   id: string;
   title: string;
@@ -74,9 +77,9 @@ export const PORTFOLIO_INFO = {
   whatsapp: "+229 92 21 18 95",
   whatsappUrl: "https://wa.me/2290192211895",
   email: "ehouans@gmail.com",
-  avatar: "/src/assets/images/sylas_profile.jpg",
+  avatar: sylasProfile,
   logo: "https://i.pinimg.com/736x/aa/02/ac/aa02acf72bf8cf390e69a3763ef74054.jpg",
-  heroImage: "/src/assets/images/coding_redorange.jpg",
+  heroImage: codingRedOrange,
   aboutImage: "https://images.pexels.com/photos/34803986/pexels-photo-34803986.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
   portfolioUrl: "https://portfolio-five-tau-tvhmvwkgx3.vercel.app/",
   github: "https://github.com/Nel584",
