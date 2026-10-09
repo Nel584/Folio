@@ -70,8 +70,8 @@ export default function Navbar({
               <span className="fs-6 fw-bold tracking-tight text-body mb-0">
                 {PORTFOLIO_INFO.name}
               </span>
-              <span className="font-mono-code text-muted" style={{ fontSize: '0.72rem' }}>
-                EIG Bénin · Développeur Web
+              <span className="font-mono-code text-muted" style={{ fontSize: '0.62rem', lineHeight: 1.15, maxWidth: '190px', whiteSpace: 'normal' }}>
+                École Internationale du Graphisme du Bénin · Développeur Web
               </span>
             </div>
           </button>

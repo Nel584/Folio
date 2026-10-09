@@ -71,7 +71,7 @@ export const PORTFOLIO_INFO = {
   name: "EHOUAN Yao Sylas",
   title: "Développeur Full-Stack & Designer Web",
   tagline: "Je transforme vos idées en applications web modernes, rapides et élégantes.",
-  bio: "Étudiant en développement web à l'EIG Bénin et développeur passionné, je conçois des sites et applications web sur mesure avec React, Next.js, PHP, Laravel et TypeScript. Mon expérience terrain en vente et relation client m'a appris à écouter précisément vos besoins et à livrer des solutions fiables et performantes.",
+  bio: "Étudiant en développement web à l'École Internationale du Graphisme du Bénin et développeur passionné, je conçois des sites et applications web sur mesure avec React, Next.js, PHP, Laravel et TypeScript. Mon expérience terrain en vente et relation client m'a appris à écouter précisément vos besoins et à livrer des solutions fiables et performantes.",
   location: "Cotonou, Bénin",
   phone: "+229 01 92 21 18 95",
   whatsapp: "+229 92 21 18 95",
@@ -213,7 +213,7 @@ export const PROJECTS: Project[] = [
     stats: [
       { label: "Statut", value: "En ligne" },
       { label: "Parcours", value: "100% Fluide" },
-      { label: "Équipe", value: "Hackathon EIG" }
+      { label: "Équipe", value: "Hackathon de l'École Internationale du Graphisme du Bénin" }
     ]
   },
   {
@@ -251,7 +251,7 @@ export const PROJECTS: Project[] = [
     title: "SchoolPay",
     subtitle: "Plateforme de paiement scolaire académique",
     description: "Plateforme de paiement scolaire réalisée en groupe, permettant le règlement des frais de scolarité et l'édition de reçus.",
-    longDescription: "Projet d'envergure développé en équipe à l'EIG Bénin. SchoolPay digitalise le paiement des scolarités pour les écoles et universités, offrant aux parents un canal rapide et traçable, et aux administrations un suivi comptable en temps réel.",
+    longDescription: "Projet d'envergure développé en équipe à l'École Internationale du Graphisme du Bénin. SchoolPay digitalise le paiement des scolarités pour les écoles et universités, offrant aux parents un canal rapide et traçable, et aux administrations un suivi comptable en temps réel.",
     category: "realise",
     categoryLabel: "Projet académique collectif",
     tags: ["React", "Node.js", "PostgreSQL", "Bootstrap 5"],
@@ -378,7 +378,7 @@ export const EXPERIENCES: Experience[] = [
   {
     id: "exp-2",
     role: "Développeur Web en Formation",
-    company: "EIG Bénin (École d'Informatique et de Gestion)",
+    company: "École Internationale du Graphisme du Bénin",
     period: "2025 - 2026",
     location: "Cotonou, Bénin",
     type: "Formation & Projets",
@@ -397,7 +397,7 @@ export const FORMATIONS: Education[] = [
   {
     id: "form-1",
     degree: "Formation en développement web",
-    school: "EIG Bénin",
+    school: "École Internationale du Graphisme du Bénin",
     period: "2025 - 2026",
     description: "Cursus complet axé sur le développement web moderne : HTML, CSS, JavaScript, PHP, React, Laravel, MySQL et travail collaboratif."
   },

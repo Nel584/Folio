@@ -66,7 +66,7 @@ COMPÉTENCES :
 • Outils       : Git, GitHub, VS Code
 
 PROFIL :
-Étudiant en développement web à l'EIG Bénin, je réalise des sites et applications web.
+Étudiant en développement web à l'École Internationale du Graphisme du Bénin, je réalise des sites et applications web.
 Ma formation couvre HTML, CSS, JavaScript, PHP, React et Laravel. Mon expérience
 en vente et en conseil client m'a appris à comprendre les besoins et à apporter des solutions adaptées.
 
@@ -88,7 +88,7 @@ EXPÉRIENCE PROFESSIONNELLE :
   - Participation à la promotion sur les réseaux sociaux.
 
 FORMATION :
-• Formation en développement web (En cours) - EIG Bénin
+• Formation en développement web (En cours) - École Internationale du Graphisme du Bénin
 • Baccalauréat (2024 - 2025)
 
 CERTIFICAT :
@@ -362,7 +362,7 @@ CENTRES D'INTÉRÊT :
                     <div className="d-flex justify-content-between align-items-start">
                       <div>
                         <div className="fw-bold text-body small">Formation en développement web</div>
-                        <div className="text-muted small">EIG Bénin</div>
+                        <div className="text-muted small">École Internationale du Graphisme du Bénin</div>
                       </div>
                       <span className="badge bg-success-subtle text-success border border-success-subtle font-mono-code text-xs">
                         En cours

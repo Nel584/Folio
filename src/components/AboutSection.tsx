@@ -84,7 +84,7 @@ export default function AboutSection({ onNavigate, onOpenCVModal, onOpenCertific
                 <div className="p-3 bg-body-tertiary rounded-4 border d-flex flex-column gap-2 mb-3">
                   <div className="d-flex align-items-center justify-content-between small">
                     <span className="text-muted">Établissement :</span>
-                    <strong className="text-body">EIG Bénin</strong>
+                    <strong className="text-body">École Internationale du Graphisme du Bénin</strong>
                   </div>
                   <div className="d-flex align-items-center justify-content-between small">
                     <span className="text-muted">Expérience :</span>
