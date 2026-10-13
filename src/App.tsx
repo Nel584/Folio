@@ -97,7 +97,6 @@ export default function App() {
         onNavigate={handleNavigate}
         theme={theme} 
         toggleTheme={toggleTheme} 
-        onOpenCVModal={() => setIsCVModalOpen(true)} 
       />
 
       {/* Main Multi-Page Content with Framer Motion Page Transitions */}

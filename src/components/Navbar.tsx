@@ -8,8 +8,6 @@ import {
   Menu, 
   X, 
   Sparkles, 
-  FileText, 
-  Send,
   Code2
 } from 'lucide-react';
 
@@ -18,15 +16,13 @@ interface NavbarProps {
   onNavigate: (page: PageId) => void;
   theme: 'dark' | 'light';
   toggleTheme: () => void;
-  onOpenCVModal?: () => void;
 }
 
 export default function Navbar({ 
   currentPage, 
   onNavigate, 
   theme, 
-  toggleTheme, 
-  onOpenCVModal 
+  toggleTheme
 }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -49,16 +45,16 @@ export default function Navbar({
   return (
     <header className="position-sticky top-0 start-0 w-100 px-3 py-2 z-50">
       <nav 
-        className={`navbar navbar-expand-lg glass-navbar rounded-4 shadow-sm mx-auto transition-all border ${
+        className={`navbar navbar-expand-xl glass-navbar rounded-4 shadow-sm mx-auto transition-all border ${
           isScrolled ? 'py-2 px-3' : 'py-2.5 px-4'
         }`}
         style={{ maxWidth: '1240px' }}
       >
-        <div className="container-fluid p-0 d-flex align-items-center justify-content-between">
+        <div className="container-fluid p-0 d-flex align-items-center justify-content-between portfolio-navbar-inner">
           {/* Logo brand */}
           <button 
             onClick={() => handleNavClick('accueil')}
-            className="navbar-brand d-flex align-items-center gap-2 text-decoration-none border-0 bg-transparent text-start p-0"
+            className="navbar-brand m-0 d-flex align-items-center gap-2 text-decoration-none border-0 bg-transparent text-start p-0"
           >
             <div 
               className="d-flex align-items-center justify-content-center rounded-3 bg-primary text-white shadow-sm"
@@ -70,21 +66,21 @@ export default function Navbar({
               <span className="fs-6 fw-bold tracking-tight text-body mb-0">
                 {PORTFOLIO_INFO.name}
               </span>
-              <span className="font-mono-code text-muted" style={{ fontSize: '0.62rem', lineHeight: 1.15, maxWidth: '190px', whiteSpace: 'normal' }}>
+              <span className="font-mono-code text-muted d-none d-sm-block" style={{ fontSize: '0.62rem', lineHeight: 1.15, maxWidth: '190px', whiteSpace: 'normal' }}>
                 École Internationale du Graphisme du Bénin · Développeur Web
               </span>
             </div>
           </button>
 
           {/* Desktop Nav Items */}
-          <div className="d-none d-lg-flex align-items-center gap-1">
+          <div className="d-none d-xl-flex align-items-center gap-1 portfolio-navbar-links">
             {NAV_ITEMS.map((item) => {
               const isActive = currentPage === item.id;
               return (
                 <button
                   key={item.id}
                   onClick={() => handleNavClick(item.id)}
-                  className={`btn btn-link nav-link px-3 py-2 rounded-3 text-sm fw-medium transition-colors position-relative text-decoration-none border-0 ${
+                  className={`btn btn-link nav-link px-2 py-2 rounded-3 text-sm fw-medium transition-colors position-relative text-decoration-none border-0 ${
                     isActive ? 'text-primary fw-semibold' : 'text-body-secondary hover-text-primary'
                   }`}
                 >
@@ -102,8 +98,8 @@ export default function Navbar({
             })}
           </div>
 
-          {/* Right Action buttons */}
-          <div className="d-flex align-items-center gap-2">
+          {/* Theme and menu controls */}
+          <div className="d-flex align-items-center gap-2 portfolio-navbar-controls">
             {/* Theme Toggle Button */}
             <button
               onClick={toggleTheme}
@@ -119,29 +115,13 @@ export default function Navbar({
               )}
             </button>
 
-            {/* CV Download / View Button */}
-            <button
-              onClick={onOpenCVModal}
-              className="btn btn-outline-primary btn-sm d-none d-sm-inline-flex align-items-center gap-2 rounded-pill px-3 py-1.5 fw-medium"
-            >
-              <FileText size={15} />
-              <span>CV</span>
-            </button>
-
-            {/* Direct Contact Button */}
-            <button
-              onClick={() => handleNavClick('contact')}
-              className="btn btn-primary btn-sm d-inline-flex align-items-center gap-2 rounded-pill px-3 py-1.5 fw-medium shadow-sm"
-            >
-              <Send size={14} />
-              <span>Contacter</span>
-            </button>
-
             {/* Mobile Hamburger Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="btn btn-outline-secondary border-0 d-lg-none p-2 rounded-3"
+              className="btn btn-outline-secondary border-0 d-xl-none p-2 rounded-3"
               aria-label="Menu"
+              aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-navigation"
             >
               {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
@@ -156,7 +136,8 @@ export default function Navbar({
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.25 }}
-              className="d-lg-none w-100 overflow-hidden pt-3 border-top mt-3"
+              id="mobile-navigation"
+              className="d-xl-none w-100 overflow-hidden pt-3 border-top mt-3"
             >
               <div className="d-flex flex-column gap-2 pb-2">
                 {NAV_ITEMS.map((item) => (
@@ -173,25 +154,6 @@ export default function Navbar({
                     {currentPage === item.id && <Sparkles size={16} />}
                   </button>
                 ))}
-                <div className="d-flex gap-2 pt-2 border-top mt-2">
-                  <button
-                    onClick={() => {
-                      setMobileMenuOpen(false);
-                      if (onOpenCVModal) onOpenCVModal();
-                    }}
-                    className="btn btn-outline-primary btn-sm w-50 d-flex align-items-center justify-content-center gap-2 py-2 rounded-pill"
-                  >
-                    <FileText size={16} />
-                    <span>Voir le CV</span>
-                  </button>
-                  <button
-                    onClick={() => handleNavClick('contact')}
-                    className="btn btn-primary btn-sm w-50 d-flex align-items-center justify-content-center gap-2 py-2 rounded-pill"
-                  >
-                    <Send size={16} />
-                    <span>Contacter</span>
-                  </button>
-                </div>
               </div>
             </motion.div>
           )}
