@@ -11,7 +11,6 @@ import {
   Briefcase, 
   Code2, 
   Send, 
-  FileText,
   Sparkles,
   CheckCircle2,
   ExternalLink,
@@ -23,11 +22,10 @@ import {
 
 interface AboutSectionProps {
   onNavigate: (page: PageId) => void;
-  onOpenCVModal: () => void;
   onOpenCertificateModal: () => void;
 }
 
-export default function AboutSection({ onNavigate, onOpenCVModal, onOpenCertificateModal }: AboutSectionProps) {
+export default function AboutSection({ onNavigate, onOpenCertificateModal }: AboutSectionProps) {
   return (
     <section id="a-propos" className="py-5 position-relative">
       <div className="container py-4">
@@ -99,13 +97,6 @@ export default function AboutSection({ onNavigate, onOpenCVModal, onOpenCertific
 
               {/* Action buttons */}
               <div className="d-flex flex-column gap-2 pt-2">
-                <button
-                  onClick={onOpenCVModal}
-                  className="btn btn-outline-primary rounded-pill py-2.5 fw-medium d-flex align-items-center justify-content-center gap-2"
-                >
-                  <FileText size={16} />
-                  <span>Consulter mon CV complet</span>
-                </button>
                 <button
                   onClick={() => onNavigate('contact')}
                   className="btn btn-primary rounded-pill py-2.5 fw-semibold d-flex align-items-center justify-content-center gap-2 shadow-sm"

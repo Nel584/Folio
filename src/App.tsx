@@ -14,7 +14,6 @@ import Testimonials from './components/Testimonials';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import ProjectModal from './components/ProjectModal';
-import CVModal from './components/CVModal';
 import CertificateModal from './components/CertificateModal';
 import { Check, ArrowUp } from 'lucide-react';
 
@@ -35,7 +34,6 @@ export default function App() {
     return VALID_PAGES.includes(hash) ? hash : 'accueil';
   });
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [isCVModalOpen, setIsCVModalOpen] = useState(false);
   const [isCertificateModalOpen, setIsCertificateModalOpen] = useState(false);
   const [emailCopied, setEmailCopied] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -124,7 +122,6 @@ export default function App() {
               <div className="pt-4">
                 <AboutSection 
                   onNavigate={handleNavigate}
-                  onOpenCVModal={() => setIsCVModalOpen(true)}
                   onOpenCertificateModal={() => setIsCertificateModalOpen(true)}
                 />
               </div>
@@ -180,12 +177,6 @@ export default function App() {
       <ProjectModal 
         project={selectedProject} 
         onClose={() => setSelectedProject(null)} 
-      />
-
-      {/* CV Modal (Sylas Ehouan Official CV) */}
-      <CVModal 
-        isOpen={isCVModalOpen} 
-        onClose={() => setIsCVModalOpen(false)} 
       />
 
       {/* Certificate Modal (Domestika Digital Marketing 101) */}
