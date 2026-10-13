@@ -360,6 +360,19 @@ export const PROJECTS: Project[] = [
 
 export const EXPERIENCES: Experience[] = [
   {
+    id: "exp-3",
+    role: "Baccalauréat",
+    company: "Enseignement Secondaire",
+    period: "2023 - 2024",
+    location: "Bénin",
+    type: "Formation",
+    description: "Diplôme de fin d'études secondaires, avec des bases solides en logique et en communication.",
+    accomplishments: [
+      "Obtention du diplôme de Baccalauréat"
+    ],
+    skills: ["Logique", "Communication"]
+  },
+  {
     id: "exp-1",
     role: "Conseiller en vente - produits cosmétiques",
     company: "Boutique de cosmétiques, Marché Dantokpa",
