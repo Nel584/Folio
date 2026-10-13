@@ -24,7 +24,7 @@ export default function Testimonials() {
           {TESTIMONIALS.map((t) => (
             <div key={t.id} className="col-12 col-md-4">
               <div className="card glass-card h-100 p-4 rounded-4 border shadow-sm d-flex flex-column">
-                <div className="d-flex align-items-center justify-content-between mb-3">
+                <div className="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
                   <div className="d-flex gap-1 text-warning">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} size={15} fill="currentColor" />

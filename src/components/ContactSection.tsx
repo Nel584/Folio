@@ -125,8 +125,8 @@ export default function ContactSection({ onCopyEmail, emailCopied }: ContactSect
                   </a>
 
                   {/* Email with copy */}
-                  <div className="p-3 rounded-4 border bg-body-tertiary d-flex align-items-center justify-content-between">
-                    <div className="d-flex align-items-center gap-3">
+                  <div className="p-3 rounded-4 border bg-body-tertiary d-flex align-items-center justify-content-between flex-wrap gap-2">
+                    <div className="d-flex align-items-center gap-3 flex-grow-1" style={{ minWidth: 0 }}>
                       <div 
                         className="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center"
                         style={{ width: '42px', height: '42px' }}
@@ -135,14 +135,14 @@ export default function ContactSection({ onCopyEmail, emailCopied }: ContactSect
                       </div>
                       <div>
                         <div className="text-body fw-semibold small">Email Professionnel</div>
-                        <div className="font-mono-code text-muted" style={{ fontSize: '0.8rem' }}>
+                        <div className="font-mono-code text-muted text-break" style={{ fontSize: '0.8rem' }}>
                           {PORTFOLIO_INFO.email}
                         </div>
                       </div>
                     </div>
                     <button
                       onClick={onCopyEmail}
-                      className="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 font-mono-code text-xs d-flex align-items-center gap-1"
+                      className="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 font-mono-code text-xs d-flex align-items-center gap-1 flex-shrink-0"
                       title="Copier l'adresse email"
                     >
                       {emailCopied ? (
@@ -200,7 +200,7 @@ export default function ContactSection({ onCopyEmail, emailCopied }: ContactSect
               {/* Social Profiles */}
               <div className="pt-3 border-top">
                 <div className="text-muted small font-mono-code mb-2">Réseaux :</div>
-                <div className="d-flex gap-2">
+                <div className="d-flex flex-wrap gap-2">
                   <a
                     href={PORTFOLIO_INFO.github}
                     target="_blank"
